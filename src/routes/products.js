@@ -45,12 +45,6 @@ module.exports = [
     path: '/products',
     config: {
       handler: productCreate,
-      payload: {
-        output: 'stream',
-        parse: true,
-        allow: 'multipart/form-data',
-        maxBytes: 50000000
-      },
       validate: {
         payload: {
           name: Joi.string().required(),
